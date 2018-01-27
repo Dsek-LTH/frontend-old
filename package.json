@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "React Typescript Boilerplate",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "webpack",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts?(x)'",
     "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts?(x)'"
@@ -21,7 +22,8 @@
     "tslint": "^5.9.1",
     "tslint-react": "^3.4.0",
     "typescript": "^2.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
     "@types/react": "^16.0.35",
