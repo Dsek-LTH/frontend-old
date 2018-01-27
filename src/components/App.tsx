@@ -1,14 +1,9 @@
 import * as React from "react";
 
-export interface IAppProps {
-  compiler: string;
-  framework: string;
-}
-
-export function App(props: IAppProps) {
+export function App() {
   return (
     <h1>
-      Hello from {props.compiler} and {props.framework}!
+      Hello World!
     </h1>
   );
 }
