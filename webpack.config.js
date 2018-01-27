@@ -18,9 +18,17 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loaders: ["react-hot-loader/webpack", "awesome-typescript-loader"],
+        use: ["react-hot-loader/webpack", "awesome-typescript-loader"],
       },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ],
+      },
     ],
   },
   plugins: [
