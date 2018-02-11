@@ -1,8 +1,8 @@
 {
-  "name": "react-typescript-boilerplate",
+  "name": "frontend",
   "private": true,
   "version": "1.0.0",
-  "description": "React Typescript Boilerplate",
+  "description": "DSek Frontend",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcusrettig/react-typescript-boilerplate.git"
+    "url": "git+https://github.com/Dsek-LTH/frontend.git"
   },
-  "author": "Marcus Rettig",
+  "author": "DWWW",
   "license": "MIT",
   "devDependencies": {
     "awesome-typescript-loader": "^3.4.1",
