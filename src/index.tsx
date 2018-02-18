@@ -2,6 +2,7 @@ import { Provider } from "mobx-react";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
+import { BrowserRouter } from "react-router-dom";
 
 import App from "./components/App";
 import TimerState from "./model/TimerState";
@@ -14,7 +15,9 @@ function render(Component: typeof App) {
   ReactDOM.render(
     <AppContainer>
       <Provider {...stores}>
-        <Component />
+        <BrowserRouter>
+          <Component />
+        </BrowserRouter>
       </Provider>
     </AppContainer>,
     document.getElementById("root"),
