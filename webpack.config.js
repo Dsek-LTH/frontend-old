@@ -10,6 +10,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     hot: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
