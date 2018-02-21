@@ -1,6 +1,6 @@
 import { action, observable } from "mobx";
 
-export default class AppState {
+export default class TimerState {
   @observable public timer = 0;
 
   constructor() {

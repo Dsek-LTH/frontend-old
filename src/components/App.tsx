@@ -1,32 +1,28 @@
-import autobind from "autobind-decorator";
 import { observer } from "mobx-react";
 import * as React from "react";
+import { Link, Route, RouteComponentProps, withRouter } from "react-router-dom";
 
-import AppState from "../model/AppState";
-import "./App.scss";
+import Timer from "./Timer";
 
-export interface IAppProps {
-  app: AppState;
-}
+export interface IAppProps extends RouteComponentProps<IAppProps> {}
 
 @observer
 class App extends React.Component<IAppProps> {
   public render() {
-    const { app } = this.props;
     return (
       <div>
-        <h1 className="app-header">Timer {app.timer}</h1>
-        <button type="button" onClick={this.handleReset}>
-          Reset Timer
-        </button>
+        <h1>D-sektionen</h1>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
+        <p>
+          <Link to="/timer">Timer</Link>
+        </p>
+        <Route path="/timer" component={Timer} />
       </div>
     );
   }
-
-  @autobind
-  private handleReset() {
-    this.props.app.resetTimer();
-  }
 }
 
-export default App;
+// Avoids blocked render when location changes
+export default withRouter(App);

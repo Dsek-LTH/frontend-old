@@ -1,16 +1,24 @@
+import { Provider } from "mobx-react";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
+import { BrowserRouter } from "react-router-dom";
 
 import App from "./components/App";
-import AppState from "./model/AppState";
+import TimerState from "./model/TimerState";
 
-const app = new AppState();
+const stores = {
+  timer: new TimerState(),
+};
 
 function render(Component: typeof App) {
   ReactDOM.render(
     <AppContainer>
-      <Component app={app} />
+      <Provider {...stores}>
+        <BrowserRouter>
+          <Component />
+        </BrowserRouter>
+      </Provider>
     </AppContainer>,
     document.getElementById("root"),
   );
