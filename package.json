@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "description": "DSek Frontend",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --port 8081",
     "build": "webpack",
+    "install": "webpack",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts?(x)'",
     "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts?(x)'"
   },
